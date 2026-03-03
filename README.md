@@ -4,7 +4,7 @@
 ![Rust](https://img.shields.io/badge/rust-%E2%9C%93-orange?logo=rust)
 ![Qt](https://img.shields.io/badge/Qt_6.5-compatible-blue?logo=qt)
 ![Quartus](https://img.shields.io/badge/Quartus_Prime-25.x-blue)
-![License](https://img.shields.io/badge/license-MIT-blue)
+![License](https://img.shields.io/badge/license-MPL--2.0-blue)
 
 This repo allows running Altera Quartus on Linux with a dark theme,
 providing a modern look while being easy on the eyes for Linux users.
@@ -15,7 +15,7 @@ So this is a dark mode for Altera Quartus Prime on Linux using [QDarkStyleSheet]
 
 Quartus's argument parser intercepts `-stylesheet` before Qt can process it on Linux. This project uses a small Rust `LD_PRELOAD` library to hook `QApplication::exec()` and inject the stylesheet directly via Qt's `setStyleSheet()` API.
 
-Tested with Quartus Prime Pro 25.3.1 (Qt 6.5.7) on Linux Mint 22.
+Tested with Quartus Prime Pro 25.3.1 (Qt 6.5.7) on **Linux Mint 22.3 Cinnamon.**
 
 ![alt text](assets/quartus_mint_demo2.gif)
 
@@ -65,6 +65,6 @@ QUARTUS_BIN=/path/to/quartus/bin/quartus ./launch_quartus.sh
 
 ## Attribution
 
-QSS based on [QDarkStyleSheet](https://github.com/ColinDuquesnoy/QDarkStyleSheet) — see `LICENSE.md`.
+QSS stylesheet derived from [QDarkStyleSheet](https://github.com/ColinDuquesnoy/QDarkStyleSheet) (MIT licensed).
 
-Windows version based on [Intel-Quartus-Dark-Mode-Windows](https://github.com/peter-tanner/Intel-Quartus-Dark-Mode-Windows).
+Windows approach inspired by [Intel-Quartus-Dark-Mode-Windows](https://github.com/peter-tanner/Intel-Quartus-Dark-Mode-Windows).
