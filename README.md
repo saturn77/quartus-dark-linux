@@ -1,25 +1,27 @@
-# Intel Quartus Prime Dark Mode — Linux
+# Altera Quartus Prime Dark Mode — Linux
 
 ![Platform](https://img.shields.io/badge/platform-Linux-blue)
 ![Rust](https://img.shields.io/badge/rust-%E2%9C%93-orange?logo=rust)
-![Qt](https://img.shields.io/badge/Qt_6.5-compatible-green?logo=qt)
-![Quartus](https://img.shields.io/badge/Quartus_Prime-25.x-0071C5?logo=intel)
-![License](https://img.shields.io/badge/license-MIT-brightgreen)
+![Qt](https://img.shields.io/badge/Qt_6.5-compatible-blue?logo=qt)
+![Quartus](https://img.shields.io/badge/Quartus_Prime-25.x-blue)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
 This repo allows running Altera Quartus on Linux with a dark theme,
 providing a modern look while being easy on the eyes for Linux users.
 There are some dark stylesheets for Windows, but those simply will
 not work on Linux. 
 
-So this is a dark mode for Intel Quartus Prime on Linux using [QDarkStyleSheet](https://github.com/ColinDuquesnoy/QDarkStyleSheet) with Quartus-specific patches.
+So this is a dark mode for Altera Quartus Prime on Linux using [QDarkStyleSheet](https://github.com/ColinDuquesnoy/QDarkStyleSheet) with Quartus-specific patches.
 
 Quartus's argument parser intercepts `-stylesheet` before Qt can process it on Linux. This project uses a small Rust `LD_PRELOAD` library to hook `QApplication::exec()` and inject the stylesheet directly via Qt's `setStyleSheet()` API.
 
 Tested with Quartus Prime Pro 25.3.1 (Qt 6.5.7) on Linux Mint 22.
 
+<video controls src="assets/quartus_mint_demo.mp4" title="Title"></video>
+
 ## Requirements
 
-- Intel Quartus Prime installed and run at least once
+- Altera Quartus Prime installed and run at least once
 - Rust toolchain (`cargo`, `rustc`) — the inject library is compiled from source on first launch
 
 ### Installing Rust
